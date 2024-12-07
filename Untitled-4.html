@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve Me</title>
+    <link rel="stylesheet" href="Untitled-1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+</head>
+<body>
+    <div class="animated-background"></div>
+    <header class="animated-header">
+        <div class="header-left">
+            <span class="menu-icon"><i class="fas fa-bars"></i></span>
+            <span class="header-text">Reserve-Me</span>
+        </div>
+        <div class="header-right">
+            <div class="header-search">
+                <span class="search-icon"><i class="fas fa-search"></i></span>
+                <input type="text" class="header-search-input" placeholder="Search...">
+            </div>
+            <span class="icon archive-icon"><i class="fas fa-archive"></i></span>
+            <span class="icon user-icon"><i class="fas fa-user"></i></span>
+            <span class="icon notification-icon"><i class="fas fa-bell"></i><span class="notification-count" id="notification-count">0</span></span>
+        </div>
+    </header>
+    <nav class="menu-drawer">
+        <span class="close-icon"><i class="fas fa-times"></i></span>
+        <ul>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">Holidays</a></li>
+            <li><a href="#">Cuisine</a></li>
+            <li><a href="#">Reserving</a></li>
+            <li><a href="#">Restaurant Location</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="intro">
+            <h2>Order Food, Reserve Food & Locate Restaurants</h2>
+            <p>Welcome to Reserve Me, your go-to platform for ordering and reserving food. Find nearby restaurants using our geolocation feature.</p>
+        </section>
+        <section class="order-food">
+            <h3>Order Food</h3>
+            <p>Browse through our extensive menu and place your order with ease.</p>
+            <button id="order-now-btn">Order Now</button>
+            <div id="food-list" class="hidden">
+                
+            </div>
+        </section>
+        <section class="reserve-food">
+            <h3>Reserve Food</h3>
+            <p>Reserve your favorite dishes in advance and skip the wait.</p>
+            <button id="reserve-food-btn">Reserve Now</button>
+            <div id="restaurants-list" class="hidden">
+              
+            </div>
+        </section>
+        <section class="locate-restaurants">
+            <h3>Locate Restaurants</h3>
+            <p>Use our geolocation feature to find the best restaurants near you.</p>
+            <button id="find-restaurants-btn">Find Restaurants</button>
+            <div id="nearby-restaurants-list"></div>
+        </section>
+        <section class="about-us">
+            <h3>About Us</h3>
+            <p>Learn more about our mission, vision, and the team that makes it all happen.</p>
+            <button>Read More</button>
+        </section>
+        <section class="contact-us">
+            <h3>Contact Us</h3>
+            <p>Have questions or feedback? Get in touch with our support team.</p>
+            <button>Contact Now</button>
+        </section>
+        <section class="reviews">
+            <h3>Customer Reviews</h3>
+            <p>See what our satisfied customers have to say about us.</p>
+            <button>View Reviews</button>
+        </section>
+
+    </main>
+    <footer class="animated-footer">
+        <p>&copy; 2024 Reserve-Me</p>
+        <div class="social-media">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>Privacy Policy | Terms of Service</p>
+    </footer>
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <span class="close" id="login-modal-close">&times;</span>
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="register-link">Register here</a></p>
+        </div>
+    </div>
+    <div class="modal" id="register-modal">
+        <div class="modal-content">
+            <span class="close" id="register-modal-close">&times;</span>
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="new-username">Username:</label>
+                <input type="text" id="new-username" name="new-username" required>
+                <label for="new-password">Password:</label>
+                <input type="password" id="new-password" name="new-password" required>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+        <div class="notification-container" id="notification-container"></div>
+    <script src="Untitled-3.js"></script>
+</body>
+</html>
